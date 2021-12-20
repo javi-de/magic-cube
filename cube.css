@@ -1,0 +1,62 @@
+.magic-cube {
+    width: 200px;
+    height: 200px;
+    perspective: 500px;
+    margin: 100px;
+    transition: var(--medium);
+}
+
+.magic-cube:hover{
+    transform: scale(1.2);
+    filter: hue-rotate(50deg);
+}
+
+.magic-cube *{
+    transition: var(--medium);
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 0, 45deg);
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    background: var(--accent-color);
+    border: 2px solid var(--background);
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.left {
+    transform: translateX(-100px) rotateY(-90deg);
+}
+
+.right {
+    transform: translateX(100px) rotateY(90deg);
+}
+
+.top {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+  
+  .bottom {
+    transform: translateY(100px) rotateX(-90deg);
+  }
